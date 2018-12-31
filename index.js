@@ -29,6 +29,8 @@ function makeCake() {
 }
 
 function makePie() {
+  // pie.decorate = cake.decorate.bind(pie);
+
   var updatePieStatus;
   mix(updatePieStatus)
 }
@@ -62,6 +64,11 @@ function cool(updateFunction) {
 function makeDessert() {
   //add code here to decide which make... function to call
   //based on which link was clicked
+  if (this.parentNode.id == 'cake') {
+    makeCake()
+  } else {
+    makePie()
+  }
 }
 
 function serve(message, customer) {
